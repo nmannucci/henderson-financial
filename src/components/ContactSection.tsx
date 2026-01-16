@@ -1,37 +1,8 @@
 
-import { useEffect } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import LeadConnectorForm from './LeadConnectorForm';
 
 export default function ContactSection() {
-  useEffect(() => {
-    // Check if script is already added to avoid duplicates if possible, 
-    // though the previous implementation added/removed on mount/unmount which is safer for SPA navigation.
-    // However, if we navigate from Home to Contact, the script might be removed and re-added.
-    // Let's stick to the previous safe pattern.
-    const scriptId = 'msgsndr-form-embed-js';
-    let script = document.getElementById(scriptId) as HTMLScriptElement;
-    
-    if (!script) {
-        script = document.createElement('script');
-        script.id = scriptId;
-        script.src = "https://link.msgsndr.com/js/form_embed.js";
-        script.async = true;
-        document.body.appendChild(script);
-    }
-
-    return () => {
-      // Optional: Remove script on unmount if we want to be strictly clean,
-      // but if multiple components use it, we might want to be careful.
-      // Given the simple usage, removing it is fine as the other component will re-add it.
-      // Actually, if we navigate from Home to Contact, Home unmounts -> removes script -> Contact mounts -> adds script.
-      // This is acceptable.
-      const scriptToRemove = document.getElementById(scriptId);
-      if (scriptToRemove) {
-        document.body.removeChild(scriptToRemove);
-      }
-    };
-  }, []);
-
   return (
     <section id="contact" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,26 +51,7 @@ export default function ContactSection() {
             </div>
 
             {/* Contact Form */}
-            <div className="w-full h-full bg-slate-50 p-4 rounded-sm border border-gray-100">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/G39HasZvXOK2YRmJBIBo"
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '16px' }}
-                id="inline-G39HasZvXOK2YRmJBIBo" 
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Web Form"
-                data-height="625"
-                data-layout-iframe-id="inline-G39HasZvXOK2YRmJBIBo"
-                data-form-id="G39HasZvXOK2YRmJBIBo"
-                title="Web Form"
-              >
-              </iframe>
-            </div>
+            <LeadConnectorForm />
           </div>
         </div>
       </section>
