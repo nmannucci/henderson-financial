@@ -11,6 +11,7 @@ import {
   MapPin
 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+import GoogleReviews from '../components/GoogleReviews';
 
 export default function Home() {
   return (
@@ -337,6 +338,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Section */}
+      <GoogleReviews />
 
       {/* Contact Section */}
       <ContactSection />
