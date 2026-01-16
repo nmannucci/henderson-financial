@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
 import SmallBusinessAccounting from './pages/services/SmallBusinessAccounting';
 import IndividualTaxPreparation from './pages/services/IndividualTaxPreparation';
 import PayrollServices from './pages/services/PayrollServices';
@@ -18,6 +19,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/services/small-business-accounting" element={<SmallBusinessAccounting />} />
             <Route path="/services/individual-tax-preparation" element={<IndividualTaxPreparation />} />
             <Route path="/services/payroll" element={<PayrollServices />} />

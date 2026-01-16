@@ -75,14 +75,13 @@ export default function Navbar() {
               </>
             )}
 
-            <button onClick={() => {
-                if(isHome) scrollToSection('contact');
-                else window.location.href = '/#contact';
-              }} 
+            <Link to="/contact" className="text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors">Contact Us</Link>
+
+            <Link to="/contact"
               className="px-5 py-2.5 text-sm font-semibold text-white bg-navy-900 hover:bg-navy-800 rounded-sm transition-colors shadow-lg shadow-navy-900/20"
             >
               Book Consultation
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -117,7 +116,8 @@ export default function Navbar() {
 
             <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50">About Us</button>
             <button onClick={() => scrollToSection('resources')} className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50">Resources</button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-base font-medium text-gold-600 font-semibold">Book Consultation</button>
+            <Link to="/contact" onClick={toggleMenu} className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900 hover:bg-gray-50">Contact Us</Link>
+            <Link to="/contact" onClick={toggleMenu} className="block w-full text-left px-3 py-2 text-base font-medium text-gold-600 font-semibold">Book Consultation</Link>
           </div>
         </div>
       )}
