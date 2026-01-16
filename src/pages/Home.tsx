@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 import GoogleReviews from '../components/GoogleReviews';
+import founderImg from '../assets/Carl Johnson - Founder.png';
 
 export default function Home() {
   return (
@@ -178,8 +179,8 @@ export default function Home() {
               <div className="relative">
                 <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
-                    alt="David Henderson - Pasadena Tax Strategy Specialist" 
+                    src={founderImg} 
+                    alt="Carl Johnson - Pasadena Tax Strategy Specialist" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -190,10 +191,10 @@ export default function Home() {
             </div>
             
             <div className="w-full md:w-2/3 text-center md:text-left">
-              <h4 className="text-2xl md:text-3xl font-serif font-bold text-navy-900 mb-2">David Henderson</h4>
+              <h4 className="text-2xl md:text-3xl font-serif font-bold text-navy-900 mb-2">Carl Johnson</h4>
               <p className="text-gold-600 font-medium text-lg mb-6">Principal & Senior Financial Strategist</p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                With years of dedicated service in Pasadena, David Henderson leads the firm with a commitment to integrity, precision, and client empowerment. Specializing in complex tax strategies and business financial planning, David ensures that every client receives personalized guidance tailored to their unique financial landscape. His approach combines traditional accounting principles with modern financial strategies to build lasting wealth.
+                With years of dedicated service in Pasadena, Carl Johnson leads the firm with a commitment to integrity, precision, and client empowerment. Specializing in complex tax strategies and business financial planning, Carl ensures that every client receives personalized guidance tailored to their unique financial landscape. His approach combines traditional accounting principles with modern financial strategies to build lasting wealth.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
