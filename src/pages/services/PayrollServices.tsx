@@ -1,5 +1,6 @@
 
 import { CheckCircle, Users, Clock, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function PayrollServices() {
   return (
@@ -75,9 +76,9 @@ export default function PayrollServices() {
               
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="font-bold text-navy-900 mb-4">Simplify your payroll today.</p>
-                <a href="/#contact" className="block w-full py-3 bg-gold-500 text-navy-900 text-center font-bold rounded-sm hover:bg-gold-600 transition-colors">
+                <Link to="/contact" className="block w-full py-3 bg-gold-500 text-navy-900 text-center font-bold rounded-sm hover:bg-gold-600 transition-colors">
                   Get a Quote
-                </a>
+                </Link>
               </div>
             </div>
           </div>

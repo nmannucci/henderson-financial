@@ -1,5 +1,6 @@
 
 import { CheckCircle, FileText, Search, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Bookkeeping() {
   return (
@@ -75,9 +76,9 @@ export default function Bookkeeping() {
               
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <p className="font-bold text-navy-900 mb-4">Get your books in order.</p>
-                <a href="/#contact" className="block w-full py-3 bg-gold-500 text-navy-900 text-center font-bold rounded-sm hover:bg-gold-600 transition-colors">
+                <Link to="/contact" className="block w-full py-3 bg-gold-500 text-navy-900 text-center font-bold rounded-sm hover:bg-gold-600 transition-colors">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>
