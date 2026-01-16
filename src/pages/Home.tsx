@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 import GoogleReviews from '../components/GoogleReviews';
-import LeadConnectorForm from '../components/LeadConnectorForm';
 import founderImg from '../assets/Carl Johnson - Founder.png';
 
 export default function Home() {
@@ -30,27 +29,21 @@ export default function Home() {
           <div className="absolute inset-0 bg-navy-900/80 mix-blend-multiply"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight mb-6">
-                Expert CPA & Small Business <span className="text-gold-500">Accounting Services</span> in Pasadena
-              </h1>
-              <p className="text-lg md:text-xl text-gray-200 mb-8 font-light leading-relaxed">
-                Henderson Financial Solutions empowers individuals and businesses with precision tax planning, comprehensive accounting, and strategic wealth management.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href="#contact" className="px-8 py-4 text-base font-semibold text-navy-900 bg-gold-500 hover:bg-gold-600 rounded-sm transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                  Get Started
-                </a>
-                <a href="#services" className="px-8 py-4 text-base font-semibold text-white border border-white/30 hover:bg-white/10 rounded-sm transition-all backdrop-blur-sm">
-                  Explore Services
-                </a>
-              </div>
-            </div>
-            
-            <div className="w-full lg:w-1/2">
-              <LeadConnectorForm className="shadow-2xl border-0" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center md:text-left">
+          <div className="md:w-2/3">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight mb-6">
+              Expert CPA & Small Business <span className="text-gold-500">Accounting Services</span> in Pasadena
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-8 font-light leading-relaxed max-w-2xl">
+              Henderson Financial Solutions empowers individuals and businesses with precision tax planning, comprehensive accounting, and strategic wealth management.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="#contact" className="px-8 py-4 text-base font-semibold text-navy-900 bg-gold-500 hover:bg-gold-600 rounded-sm transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                Get Started
+              </a>
+              <a href="#services" className="px-8 py-4 text-base font-semibold text-white border border-white/30 hover:bg-white/10 rounded-sm transition-all backdrop-blur-sm">
+                Explore Services
+              </a>
             </div>
           </div>
         </div>
